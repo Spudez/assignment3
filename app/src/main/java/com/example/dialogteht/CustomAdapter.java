@@ -37,7 +37,7 @@ public class CustomAdapter extends ArrayAdapter<String> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         View v = View.inflate(context, R.layout.customlayout, null);
-        TextView datetxt = (TextView) convertView.findViewById(R.id.datetext);
+        TextView datetxt = convertView.findViewById(R.id.datetext);
         datetxt.setText(dataset.get(position));
         Button bt = v.findViewById(R.id.delete);
 
